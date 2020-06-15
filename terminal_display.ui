@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1654</width>
+    <width>1087</width>
     <height>704</height>
    </rect>
   </property>
@@ -26,8 +26,8 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>930</x>
-      <y>90</y>
+      <x>770</x>
+      <y>100</y>
       <width>261</width>
       <height>321</height>
      </rect>
@@ -613,14 +613,14 @@
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>70</y>
-      <width>541</width>
-      <height>391</height>
+      <x>380</x>
+      <y>100</y>
+      <width>331</width>
+      <height>541</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">image: url(:/newPrefix/body1.jpg);</string>
+     <string notr="true">border-image: url(:/newPrefix/Endermologie-Lipo-Massage-Screen.jpg);</string>
     </property>
    </widget>
   </widget>
@@ -629,7 +629,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1654</width>
+     <width>1087</width>
      <height>22</height>
     </rect>
    </property>

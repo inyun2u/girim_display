@@ -22,11 +22,16 @@ class Ui(QtWidgets.QMainWindow):
         self.serialPort.readyRead.connect(self.onreadyread)
         self.serialPort.bytesWritten.connect(self.onbyteswritten)
 
-        print("open : ", self.serialPort.open(QtCore.QIODevice.ReadWrite))
+        ports = QtSerialPort.QSerialPortInfo.availablePorts()
+        print(ports)
+
+        for eachPort in ports:
+            print(eachPort.portName())
+
+        print("open : ", self.serialPort.open(QtCore.QIODevice.ReadWrite), self.serialPort.portName())
 
         self.packet = b''
         self.packetCounter=0
-
 
         palette = QPalette()
         palette.setColor(QPalette.Window, QColor(53, 53, 53))
@@ -84,7 +89,7 @@ class Ui(QtWidgets.QMainWindow):
             self.packet = self.receivedData[index:index + 64]
             self.packetCounter += 1
 
-            print(self.packetCounter,"th packet", self.packet)
+            print(self.packetCounter, "th packet", self.packet)
 
             print("remaining stream : ", len(self.receivedData), self.receivedData)
             self.receivedData = self.receivedData[index + 64:]
